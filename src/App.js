@@ -9,6 +9,9 @@ import Home from './home';
 import Logout from './Authentication/logout';
 import CheckAssignment from './Components/checkAssignment';
 import Result from './Components/resultOfAssignment';
+import ProtectedRouteInstructor from './Authentication/protectedRouteInstructor';
+import ProtectedRouteStudent from './Authentication/protectedRouteStudent';
+
 function App() {
   return (
     <Router>
@@ -17,10 +20,10 @@ function App() {
          <Route exact path="/" component={Home}/>
          <Route path="/login" component={Login}/>
          <Route path="/logout" component={Logout}/>
-         <Route path="/dashboard" component={CreateAssignment}/>
-         <Route path="/submissions" component={CheckAssignment}/>
-         <Route path="/Studentdashboard" component={SubmitAssignment}/>
-         <Route path="/result" component={Result}/> 
+         <ProtectedRouteInstructor path="/dashboard" component={CreateAssignment}/>
+         <ProtectedRouteInstructor path="/submissions" component={CheckAssignment}/>
+         <ProtectedRouteStudent path="/Studentdashboard" component={SubmitAssignment}/>
+         <ProtectedRouteStudent path="/result" component={Result}/> 
       </Switch>
     </Router>
   );
