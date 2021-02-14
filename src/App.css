@@ -76,7 +76,8 @@
 
 
 .LoginPage{ 
-  background-color: rgba(250, 196, 125, 0.575);
+  margin: 8% 16%;
+  background-color: rgba(135, 238, 135, 0.575);
   border-radius: 30px 60px;
   padding: 5%;
   box-shadow: 2px 3px 4px   rgb(65, 138, 180);

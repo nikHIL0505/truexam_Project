@@ -58,7 +58,7 @@ function Login(props) {
              onChange={handleChange}
              className="LoginInput"
              required/>
-             {error.length > 0 ? error.map(err => <p>{err}</p>) : null}
+             {error.length > 0 ? error.map(err => <p style={{color:"red"}}>{err}</p>) : null}
             <Button type="submit" variant="outline-danger">Login</Button>
           </div>
         </form>
