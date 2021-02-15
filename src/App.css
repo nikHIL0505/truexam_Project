@@ -146,6 +146,7 @@
   border-left: 1px solid blue;
 }
 .checkAssignment{
+  margin-top: 3%;
   display: flex;
   flex-direction: row;
    align-items: center;

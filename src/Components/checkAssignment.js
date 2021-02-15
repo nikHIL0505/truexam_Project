@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Button } from 'react-bootstrap';
 import {AddMarks} from './mainFunction';
 import {FiCheckCircle} from 'react-icons/fi';
@@ -6,14 +6,15 @@ import {FiCheckCircle} from 'react-icons/fi';
 const CheckAssignment = () => {
     
     const [marks, setMarks] = useState(null);
-    const [count, setCount] = useState(false)
-
+    const [count, setCount] = useState(false);
     // Will handle the from from default submission
+ 
 
     const handleSubmit =(e) => {
         e.preventDefault();
-        setCount(true)
+       setCount(true)
     }
+
     
     
     // Will upload the marks on assignment
@@ -57,18 +58,19 @@ const CheckAssignment = () => {
                          </Button>
                         </div>
                         <div>
+                          
                         <form onSubmit={handleSubmit}>
                          <label style={{fontSize:"18px"}}>Score:</label>
                            <input 
                             type="number" 
                             name="number" 
                             placeholder="Score" 
-                            onChange={(e) => setMarks(e.target.value)}  
+                            onChange={(e) => {setMarks(e.target.value)}}  
                             min="1" 
                             max="10"
                             required
                            />
-                           <Button type="submit" className={count ? "clickFalse" : "btn btn1"} onClick={() => uploadMarks(task.id, item.name, marks)}>Submit</Button>
+                           <Button type="submit" className={count ? "clickFalse" : "btn btn1"} onClick={() => {uploadMarks(task.id, item.name, marks)}}>Submit</Button>
                            <FiCheckCircle className={count ? "clickTrue" :"clickFalse"}/>
                         </form>
                        </div>

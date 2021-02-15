@@ -4,6 +4,7 @@ import './App.css';
 import CreateAssignment from './Components/createAssignment';
 import SubmitAssignment from './Components/submitAssignment';
 import Navbar from './Navbar/navbar';
+import Footer from './footer/footer';
 import Login from './Authentication/login';
 import Home from './home';
 import Logout from './Authentication/logout';
@@ -25,6 +26,7 @@ function App() {
          <ProtectedRouteStudent path="/Studentdashboard" component={SubmitAssignment}/>
          <ProtectedRouteStudent path="/result" component={Result}/> 
       </Switch>
+      <Footer/>
     </Router>
   );
 }
