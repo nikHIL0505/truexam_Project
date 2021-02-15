@@ -10,8 +10,8 @@ const Result = () =>{
      const tasks = JSON.parse(localStorage.getItem("Tasks"))
       
    // fetch task name and marks
-
-     tasks.map(task => {
+     if(tasks){
+       tasks.map(task => {
          task.Submission.map(item => {
              if(item.name === name){
                  const Score = {
@@ -44,6 +44,14 @@ const Result = () =>{
               )}
             </div>
      )}
-
+    }
+      else {
+        return (
+          <div className="a notAssigned">
+              <div className="heading">
+                <h1>Task is not assigned yet.</h1>
+             </div>
+          </div>
+        )}
 }
 export default Result;
