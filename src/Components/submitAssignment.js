@@ -31,7 +31,9 @@ class SubmitAssignment extends Component {
           if(TaskItem === null){
               return (
                   <div className="a notAssigned">
-                   <h1>Task is not assigned yet.</h1>
+                      <div className="heading">
+                        <h1>Task is not assigned yet.</h1>
+                     </div>
                   </div>
               )
            }
